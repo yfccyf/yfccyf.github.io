@@ -13,20 +13,41 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="section">
-    <h2>Planned Projects</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Agent Evaluation Harness</h3>
-        <p>
-          A lightweight framework for running golden test cases against multi-step agent workflows and tracking
-          regressions over time.
+    <h2>Published Projects</h2>
+    <ul class="item-list">
+      <li>
+        <h3>
+          <a href="https://github.com/yfccyf/agent-trace-eval">agent-trace-eval</a>
+        </h3>
+        <p class="meta">
+          Python library and CLI for golden trace regression testing of tool-using AI agents. Evaluates tool selection,
+          arguments, ordering, handoffs, and recovery decisions against declarative YAML/JSON cases.
         </p>
-      </article>
+        <p class="meta">
+          <a href="https://github.com/yfccyf/agent-trace-eval">GitHub</a>
+          ·
+          <a href="https://pypi.org/project/agent-trace-eval/">PyPI</a>
+          ·
+          <a href="/writing/from-golden-traces-to-release-gates-building-an-agent-regression-harness-part-2/">Related essay</a>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Roadmap</h2>
+    <div class="grid">
       <article class="card">
         <h3>Agent Trace Schema</h3>
         <p>
           A structured representation for agent runs, tool calls, retrieval events, policy checks, and evaluation
           outcomes.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Agent Trace Diff</h3>
+        <p>
+          A focused diff tool for comparing golden and candidate agent traces with readable failure reports.
         </p>
       </article>
       <article class="card">
