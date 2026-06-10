@@ -34,6 +34,7 @@ const essays = (await getCollection("writing", ({ data }) => !data.draft)).sort(
                   month: "long",
                   day: "numeric",
                 })}
+                {" · Yifan Cheng"}
                 {essay.data.tags.length > 0 && ` · ${essay.data.tags.join(", ")}`}
               </p>
               <p class="read-more">

@@ -27,6 +27,7 @@ const { Content } = await render(essay);
           month: "long",
           day: "numeric",
         })}
+        {" · Yifan Cheng"}
         {essay.data.tags.length > 0 && ` · ${essay.data.tags.join(", ")}`}
       </p>
     </header>
