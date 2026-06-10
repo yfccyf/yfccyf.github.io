@@ -210,6 +210,10 @@ h3 {
   border-bottom: 1px solid var(--border);
 }
 
+.article-header h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+}
+
 .article-body {
   padding-top: 28px;
 }
