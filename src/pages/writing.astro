@@ -36,6 +36,9 @@ const essays = (await getCollection("writing", ({ data }) => !data.draft)).sort(
                 })}
                 {essay.data.tags.length > 0 && ` · ${essay.data.tags.join(", ")}`}
               </p>
+              <p class="read-more">
+                <a href={`/writing/${essay.id}/`}>Read essay</a>
+              </p>
             </li>
           ))}
         </ul>

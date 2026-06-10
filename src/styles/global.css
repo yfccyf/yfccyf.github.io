@@ -182,7 +182,7 @@ h3 {
 }
 
 .item-list li {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -194,6 +194,11 @@ h3 {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.read-more {
+  margin: 12px 0 0;
+  font-weight: 700;
 }
 
 .article {
