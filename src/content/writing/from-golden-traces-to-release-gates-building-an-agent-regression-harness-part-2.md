@@ -1,7 +1,7 @@
 ---
 title: "From Golden Traces to Release Gates: Building an Agent Regression Harness, Part 2"
 description: "A practical implementation sketch for turning golden traces into CI-friendly regression tests for tool-using AI agents."
-date: 2026-06-10
+date: 2026-06-10T10:47:00-04:00
 draft: false
 tags:
   - AI agents

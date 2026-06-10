@@ -1,7 +1,7 @@
 ---
 title: "Final Answers Are Not Enough: Golden Trace Regression Testing for Tool-Using AI Agents, Part 1"
 description: "Why multi-step AI agents need regression tests that check the execution path, not just the final response."
-date: 2026-06-10
+date: 2026-06-10T10:37:00-04:00
 draft: false
 tags:
   - AI agents
