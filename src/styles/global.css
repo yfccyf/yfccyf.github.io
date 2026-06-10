@@ -196,6 +196,34 @@ h3 {
   font-size: 0.92rem;
 }
 
+.article {
+  max-width: 760px;
+}
+
+.article-header {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-body {
+  padding-top: 28px;
+}
+
+.article-body h2 {
+  margin-top: 36px;
+}
+
+.article-body p,
+.article-body li {
+  color: #3e4247;
+}
+
+.article-body code {
+  padding: 0.12em 0.32em;
+  background: var(--accent-soft);
+  border-radius: 6px;
+}
+
 .site-footer {
   padding: 28px 0 40px;
   border-top: 1px solid var(--border);

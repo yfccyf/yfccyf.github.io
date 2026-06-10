@@ -1,5 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const essays = (await getCollection("writing", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
 ---
 
 <BaseLayout title="Writing | Yifan Cheng">
@@ -13,24 +18,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="section">
-    <h2>Draft Topics</h2>
-    <ul class="item-list">
-      <li>
-        <h3>Reusable Infrastructure for Enterprise AI Agents</h3>
-        <p class="meta">A technical memo on moving AI agents from prototypes to reliable production systems.</p>
-      </li>
-      <li>
-        <h3>Evaluation Harnesses for Multi-Step Agent Workflows</h3>
-        <p class="meta">How to test agent behavior, detect regressions, and define release criteria.</p>
-      </li>
-      <li>
-        <h3>Observability Patterns for Tool-Using AI Agents</h3>
-        <p class="meta">Trace schemas and debugging workflows for complex agent execution paths.</p>
-      </li>
-      <li>
-        <h3>Governance-First Design for Enterprise Agent Systems</h3>
-        <p class="meta">Practical controls for policy-aware tool use, auditability, and operational trust.</p>
-      </li>
-    </ul>
+    <h2>Essays</h2>
+    {
+      essays.length > 0 ? (
+        <ul class="item-list">
+          {essays.map((essay) => (
+            <li>
+              <h3>
+                <a href={`/writing/${essay.id}/`}>{essay.data.title}</a>
+              </h3>
+              <p>{essay.data.description}</p>
+              <p class="meta">
+                {essay.data.date.toLocaleDateString("en", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+                {essay.data.tags.length > 0 && ` · ${essay.data.tags.join(", ")}`}
+              </p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Essays will appear here as Markdown files are added to <code>src/content/writing</code>.</p>
+      )
+    }
   </section>
 </BaseLayout>

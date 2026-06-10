@@ -15,6 +15,41 @@ npm run dev
 npm run build
 ```
 
+## Add a New Essay
+
+Create a Markdown file in `src/content/writing`, for example:
+
+```text
+src/content/writing/my-essay-slug.md
+```
+
+Use this frontmatter:
+
+```md
+---
+title: "Essay Title"
+description: "One-sentence summary of the essay."
+date: 2026-06-10
+draft: false
+tags:
+  - AI agents
+  - evaluation
+---
+
+Essay content goes here.
+```
+
+Then run:
+
+```bash
+npm run build
+git add .
+git commit -m "Add essay title"
+git push
+```
+
+The essay will automatically appear on `/writing/` and get its own page at `/writing/my-essay-slug/`.
+
 ## GitHub Pages Setup
 
 1. Create a public GitHub repository named `yfccyf.github.io`.
