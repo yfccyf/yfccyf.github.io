@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Yifan Cheng",
+  description = "Machine learning engineer focused on reliable enterprise AI agent infrastructure.",
+} = Astro.props;
+
+const navItems = [
+  ["About", "/about/"],
+  ["Writing", "/writing/"],
+  ["Projects", "/projects/"],
+  ["Open Source", "/open-source/"],
+  ["Talks", "/talks/"],
+  ["Impact", "/impact/"],
+  ["Contact", "/contact/"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-shell">
+        <div class="brand">
+          <a class="brand-name" href="/">Yifan Cheng</a>
+          <p class="brand-tagline">
+            Machine learning engineer and data scientist focused on reliable enterprise AI agent infrastructure.
+          </p>
+        </div>
+        <nav class="nav" aria-label="Primary navigation">
+          {navItems.map(([label, href]) => <a href={href}>{label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <main class="site-shell">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="site-shell">
+        <span>© {new Date().getFullYear()} Yifan Cheng.</span>
+        <span> Built as a public record of technical work, writing, and open-source contributions.</span>
+      </div>
+    </footer>
+  </body>
+</html>

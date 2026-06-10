@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projects | Yifan Cheng">
+  <section class="hero">
+    <p class="eyebrow">Projects</p>
+    <h1>Reusable engineering artifacts for AI reliability.</h1>
+    <p class="lead">
+      This page will collect open-source tools, reference implementations, documentation, and project notes connected to
+      production AI agent infrastructure.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Planned Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Agent Evaluation Harness</h3>
+        <p>
+          A lightweight framework for running golden test cases against multi-step agent workflows and tracking
+          regressions over time.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Agent Trace Schema</h3>
+        <p>
+          A structured representation for agent runs, tool calls, retrieval events, policy checks, and evaluation
+          outcomes.
+        </p>
+      </article>
+      <article class="card">
+        <h3>Reliability Dashboard Template</h3>
+        <p>
+          A reference dashboard for monitoring agent success rates, failure modes, latency, and evaluation trends.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
