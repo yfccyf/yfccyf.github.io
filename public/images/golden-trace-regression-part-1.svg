@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="640" viewBox="0 0 1120 640" role="img" aria-labelledby="title desc">
+  <title id="title">Golden trace regression testing for tool-using AI agents</title>
+  <desc id="desc">A diagram comparing final-answer-only evaluation with trace-aware regression testing for multi-step AI agents.</desc>
+  <rect width="1120" height="640" rx="28" fill="#fbfaf7"/>
+  <text x="56" y="70" fill="#202124" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Final-answer checks miss the path an agent took</text>
+  <text x="56" y="112" fill="#646970" font-family="Inter, Arial, sans-serif" font-size="20">Golden trace tests compare the important execution steps, not every token.</text>
+
+  <rect x="56" y="160" width="440" height="380" rx="22" fill="#ffffff" stroke="#dfddd7" stroke-width="2"/>
+  <text x="88" y="210" fill="#202124" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Final answer only</text>
+  <rect x="98" y="252" width="150" height="62" rx="14" fill="#e7f0f5"/>
+  <text x="133" y="290" fill="#21445c" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Task</text>
+  <path d="M258 283 H326" stroke="#9aa5ad" stroke-width="4" stroke-linecap="round"/>
+  <path d="M326 283 l-14 -10 v20 z" fill="#9aa5ad"/>
+  <rect x="338" y="252" width="118" height="62" rx="14" fill="#f2eee8"/>
+  <text x="374" y="290" fill="#5b5045" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Agent</text>
+  <path d="M397 326 V396" stroke="#9aa5ad" stroke-width="4" stroke-linecap="round"/>
+  <path d="M397 396 l-10 -14 h20 z" fill="#9aa5ad"/>
+  <rect x="148" y="410" width="250" height="70" rx="14" fill="#edf7ed" stroke="#b7d9b7" stroke-width="2"/>
+  <text x="185" y="453" fill="#235423" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Answer looks correct</text>
+  <text x="88" y="516" fill="#646970" font-family="Inter, Arial, sans-serif" font-size="17">But the evaluator cannot see whether the agent skipped a policy check or called the wrong tool.</text>
+
+  <rect x="624" y="160" width="440" height="380" rx="22" fill="#ffffff" stroke="#dfddd7" stroke-width="2"/>
+  <text x="656" y="210" fill="#202124" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Golden trace regression</text>
+  <rect x="676" y="248" width="126" height="50" rx="12" fill="#e7f0f5"/>
+  <text x="713" y="280" fill="#21445c" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Task</text>
+  <path d="M812 273 H858" stroke="#9aa5ad" stroke-width="4" stroke-linecap="round"/>
+  <path d="M858 273 l-14 -10 v20 z" fill="#9aa5ad"/>
+  <rect x="870" y="248" width="126" height="50" rx="12" fill="#f2eee8"/>
+  <text x="910" y="280" fill="#5b5045" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Agent</text>
+
+  <rect x="676" y="338" width="320" height="42" rx="11" fill="#fff8e7" stroke="#efd27f" stroke-width="2"/>
+  <text x="696" y="365" fill="#694f00" font-family="Inter, Arial, sans-serif" font-size="16">1. Retrieve approved source</text>
+  <rect x="676" y="392" width="320" height="42" rx="11" fill="#fff8e7" stroke="#efd27f" stroke-width="2"/>
+  <text x="696" y="419" fill="#694f00" font-family="Inter, Arial, sans-serif" font-size="16">2. Run policy check</text>
+  <rect x="676" y="446" width="320" height="42" rx="11" fill="#fff8e7" stroke="#efd27f" stroke-width="2"/>
+  <text x="696" y="473" fill="#694f00" font-family="Inter, Arial, sans-serif" font-size="16">3. Call final-answer tool</text>
+  <rect x="676" y="506" width="320" height="42" rx="11" fill="#edf7ed" stroke="#b7d9b7" stroke-width="2"/>
+  <text x="696" y="533" fill="#235423" font-family="Inter, Arial, sans-serif" font-size="16">Output and path both pass</text>
+</svg>
